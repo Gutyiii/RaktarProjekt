@@ -15,9 +15,9 @@ public class Program {
         raktar.felvesz(new Elelmiszer("alkohol", "Sprite") {});
         //raktar.felvesz(new Elelmiszer("chipsz", "Chio", "2022-11-03") {});
         raktar.getRaktar();
-        Collection.sort(raktar);
+        //Collection.sort(raktar);
         raktar.getRaktar();
-        Collection.sort(raktar, new GyartoComparator());
+        //Collection.sort(raktar, new GyartoComparator());
         raktar.getRaktar();
     }
 
