@@ -1,14 +1,30 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package modell;
 
-/**
- *
- * @author vizsgaszf
- */
-public class Raktar {
-    
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.List;
+
+public class Raktar implements Iterable<Elelmiszer> {
+
+    private List<Elelmiszer> elemiszerek;
+    private ArrayList<Elelmiszer> raktar;
+
+    public Raktar() {
+        raktar = new ArrayList<>();
+    }
+
+    public void felvesz(Elelmiszer elelmiszer) {
+        raktar.add(elelmiszer);
+    }
+
+    public List<Elelmiszer> getRaktar() {
+        return Collections.unmodifiableList(elemiszerek);
+    }
+
+    @Override
+    public Iterator<Elelmiszer> iterator() {
+        return raktar.iterator();
+    }
+
 }
